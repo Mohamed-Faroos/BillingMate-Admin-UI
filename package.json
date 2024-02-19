@@ -1,0 +1,35 @@
+{
+  "name": "billingmate-admin-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start-dev": "vite --mode development",
+    "build-dev": "tsc &&  vite build --mode development",
+    "preview-dev": "vite preview  --mode development",
+    "start-qa": "vite --mode qa",
+    "build-qa": "tsc && vite build --mode qa",
+    "start-prod": "vite --mode production",
+    "build-prod": "tsc && vite build --mode production",
+    "preview-prod": "vite preview  --mode production",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "env-cmd": "10.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0"
+  }
+}
