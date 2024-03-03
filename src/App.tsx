@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Login from "./components/auth/login";
+import Home from "./components/home";
+
+import * as frontendURL from "./lib/constants";
+import { AuthRoute, PrivateRoute } from "./router";
+import ForgotPassword from "./components/auth/forgotPassword";
+import ResetPassword from "./components/auth/resetPassword";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count} {import.meta.env.VITE_APP_NAME}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter basename={frontendURL.HOME_URL}>
+      <Routes>
+        {/* Auth Routes */}
+        <Route path={frontendURL.LOGIN_URL} element={<AuthRoute><Login /></AuthRoute>} />
+        <Route path={frontendURL.FORGOT_PASSWORD_URL} element={<AuthRoute><ForgotPassword /></AuthRoute>} />
+        <Route path={frontendURL.RESET_PASSWORD_URL} element={<AuthRoute><ResetPassword></ResetPassword></AuthRoute>} />
+
+        {/* Protected Routed */}
+        <Route path={frontendURL.HOME_URL} element={<PrivateRoute><Home /></PrivateRoute>} />
+
+        {/* Open Routed */}
+        <Route path="*" element={<p>Page not Found</p>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

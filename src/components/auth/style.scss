@@ -1,0 +1,158 @@
+@import "../../style//main.scss";
+
+.#{$prefix}-auth-main-container {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-color;
+    height: 100vh;
+    width: 100vw;
+
+    .#{$prefix}-auth-main-content {
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white-color;
+
+        .#{$prefix}-auth-logo {
+            width: 350px;
+        }
+
+        .#{$prefix}-auth-h1 {
+            width: 350px;
+        }
+
+        .#{$prefix}-auth-h2 {
+            width: 350px;
+        }
+
+        .#{$prefix}-auth-form {
+            display: inline-block;
+            width: 350px;
+
+            .#{$prefix}-auth-form-control {
+                display: inline-block;
+                margin-top: 35px;
+                width: 350px;
+
+                &:nth-child(1) {
+                    margin-top: 40px
+                }
+
+                .login-btn {
+                    width: 80px;
+                }
+
+            }
+
+            .#{$prefix}-forgot-password-link {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+
+
+        @include for-tablet-portrait-up {
+            width: 300px;
+
+            .#{$prefix}-auth-logo {
+                width: 270px;
+            }
+
+            .#{$prefix}-auth-h1 {
+                width: 270px;
+            }
+
+            .#{$prefix}-auth-h2 {
+                width: 270px;
+            }
+
+            .#{$prefix}-auth-form {
+                width: 270px;
+
+                .#{$prefix}-auth-form-control {
+                    width: 270px;
+                }
+            }
+
+            h3 {
+                font-size: 14px !important;
+            }
+
+            h2 {
+                font-size: 12px !important;
+            }
+        }
+
+        @include for-tablet-landscape-up {
+            width: 380px;
+
+            .#{$prefix}-auth-logo {
+                width: 300px;
+            }
+
+            .#{$prefix}-auth-h1 {
+                width: 300px;
+            }
+
+            .#{$prefix}-auth-h2 {
+                width: 300px;
+            }
+
+            h3 {
+                font-size: 16px !important;
+            }
+
+            h2 {
+                font-size: 14px !important;
+            }
+
+            .#{$prefix}-auth-form {
+                width: 300px;
+
+                .#{$prefix}-auth-form-control {
+                    width: 300px;
+                }
+            }
+        }
+
+        @include for-desktop-up {
+            width: 480px;
+
+            .#{$prefix}-auth-logo {
+                width: 350px;
+            }
+
+            .#{$prefix}-auth-h1 {
+                width: 350px;
+            }
+
+            .#{$prefix}-auth-h2 {
+                width: 350px;
+            }
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            h2 {
+                font-size: 16px !important;
+            }
+
+            .#{$prefix}-auth-form {
+                width: 350px;
+
+                .#{$prefix}-auth-form-control {
+                    width: 350px;
+                }
+            }
+        }
+    }
+}
