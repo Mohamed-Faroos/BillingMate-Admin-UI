@@ -1,0 +1,110 @@
+@import "./../../../style/main.scss";
+
+.#{$prefix}-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.#{$prefix}-button-sm {
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+
+    .#{$prefix}-button-icon {
+        img {
+            width: 12px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.#{$prefix}-button-md {
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    .#{$prefix}-button-icon {
+        img {
+            width: 14px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.#{$prefix}-button-lg {
+    height: 44px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+
+    .#{$prefix}-button-icon {
+        img {
+            width: 16px;
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+    }
+}
+
+.#{$prefix}-button-primary {
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+
+    &:hover {
+        filter: drop-shadow(0 0 2px $primary-color);
+    }
+}
+
+.#{$prefix}-button-secondary {
+    color: $white-color;
+    background-color: $dark-color;
+    border: none;
+
+    &:hover {
+        filter: drop-shadow(0 0 2px $dark-color);
+    }
+}
+
+.#{$prefix}-button-success {
+    color: $white-color;
+    background-color: $success-color;
+    border: none;
+
+    &:hover {
+        filter: drop-shadow(0 0 2px $success-color);
+    }
+}
+
+.#{$prefix}-button-danger {
+    color: $white-color;
+    background-color: $error-color;
+    border: none;
+
+    &:hover {
+        filter: drop-shadow(0 0 2px $error-color);
+    }
+}
+
+.#{$prefix}-button-transparent {
+    color: $dark-color;
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,8 @@
+@import "./colors.scss";
+@import "./mediaQuery.scss";
+@import "./variables.scss";
+
+h3 {
+    font-size: 20px;
+    color: $text-color;
+}
